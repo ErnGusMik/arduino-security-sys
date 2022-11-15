@@ -159,8 +159,13 @@ void loop() {
       digitalWrite(5, 0);
       delay(5000);
       digitalWrite(7, 0);
-      delay(400);
+      delay(1000);
       digitalWrite(6, 0);
+      display.clearDisplay();
+      display.setCursor(0, 5);
+      display.setTextSize(2);
+      display.println("Alarm on");
+      display.display();
       active = true;
     } else if (incoming_val == '0') {
       display.clearDisplay();
